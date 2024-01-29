@@ -1,0 +1,337 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    min-height: 100vh;
+    font-family: sans-serif;
+}
+html{
+    scroll-behavior: smooth;
+}
+.sidenav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 250px;
+    background-color: black;
+    padding: 10px;
+    height: 100vh;
+    transition: transform .5s ease-in-out;
+    z-index: 1000;
+}
+.sidenav.open {
+    transform: translateX(0);
+}
+.sidenav.close {
+    transform: translateX(-250px);
+}
+.sidenav * {
+    color: white;
+    text-decoration: none;
+}
+.profile-info {
+    width: 100%;
+    text-align: center;
+}
+.profile-icon {
+    border-radius: 50%;
+    border: 3px solid gray;
+    height: 170px;
+    width: 170px;
+    margin-bottom: 20px;
+}   
+.nav-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+.click {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    margin-top: 50px;
+}
+.btn-nav {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+.btn-icon {
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 25px;
+    width: 25px;
+    filter: brightness(0) invert(1);
+}
+.btn-nav:nth-child(1) .btn-icon{
+    background-image: url(../img/home.png);
+}
+.btn-nav:nth-child(2) .btn-icon{
+    background-image: url(../img/about.png);
+}
+.btn-nav:nth-child(3) .btn-icon{
+    background-image: url(../img/telephone.png);
+}
+.btn-nav:nth-child(4) .btn-icon{
+    background-image: url(../img/resume.png);
+}
+.btn-label {
+    transition: transform .5s ease-in-out, color .3s ease-in-out;
+}
+.btn-label:hover {
+    transform: translateX(10px);
+    color:cadetblue;
+}
+.account {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 45px;
+}
+.account-icon {
+    height: 35px;
+    width: 35px;
+    transition: transform .3s ease-in-out;
+}
+.account-icon:hover{
+    transform: scale(1.4);
+}
+.exit-container {
+    position: absolute;
+    background-color: black;
+    top: 15px;
+    right: 15px;
+    transition: transform .3s ease-in-out .5s;
+    border-radius: 6px;
+    cursor: pointer;
+}
+.exit-btn {
+    z-index: 3;
+    background-image: url(../img/exit.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 30px;
+    width: 30px;
+    filter: brightness(0) invert(1);   
+}
+
+.exit-btn.active {
+    height: 15px;
+    width: 15px;
+    background-image: url(../img/hamburger.png);
+}
+
+.sidenav.close .exit-container {
+    padding: 10px;
+    transform: translateX(50px);
+}
+.navline{
+    position: fixed;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 50px;
+    background-color:floralwhite;
+    font-family: sans-serif;
+    font-weight: bold;
+    z-index: 9;
+
+
+}
+.navline-content{
+    margin-left: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.portfolio-icon{
+   
+    background-image: url('../img/java.png');
+    background-size: contain;
+    margin-right: 5px;
+    height: 35px;
+    width: 35px;
+    
+}
+.portfolio-label{
+    display: flex;
+    color: black;
+    font-size: 20px;
+
+}
+#homepage{
+    background-image: url('../img/paper.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+.homepage-content-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.my-profile-jpg{
+    border-radius: 50%;
+    border: 4px solid black;
+    height: 250px;
+    width: 250px;
+}
+.content:nth-child(2){
+    color: red;
+}
+.web-content{
+    font-size: 20px;
+    font-family: serif;
+}
+.skill-icon {
+    display: inline-block;
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 50px;
+    width: 50px;
+    
+   
+}
+.skill-icon:nth-child(1){
+   background-image: url(../img/html5.png); 
+}
+.skill-icon:nth-child(2){
+   background-image: url(../img/css3.png); 
+}
+.skill-icon:nth-child(3){
+   background-image: url(../img/javascript.png);
+}
+
+
+
+/* Resume Content */
+
+
+
+#aboutpage{
+    background-color:burlywood;
+    width: 100%;
+    height: 100vh;
+    color: red; 
+}
+#resume {
+    padding: 40px;
+    
+}
+.resume-content {
+    display: flex;
+    flex-wrap: wrap;
+    height: 100%;
+    border-radius: 12px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+   
+}
+.resumes-content {
+    display: flex;
+    border-radius: 5px;
+    align-items: center;
+    flex-direction: column;
+    width: 265px;
+    color: black;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    
+   
+}
+
+.resume-image {
+    border-radius: 50%;
+    height: 100px;
+    width: 100px;
+    margin-bottom: 40px;
+    margin: 15px;
+    border: 2px solid gray;
+}
+.edu-content {
+    text-align: center;
+    padding-bottom: 5px;
+    width: 100%;
+    border-bottom: 2px solid black;
+}
+.edus-content{
+    font-size: 20px;
+}
+
+.talamban{
+    margin-top: 10px;
+}
+
+#contact{
+    background-color:white;
+    width: 100%;
+    height: 100vh;
+    color: red; 
+}
+.educ-content{
+    display: flex;
+    margin-top: 10px;
+    
+}
+.content-edu{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    
+    font-size: 15px;
+}
+
+.talamban-content{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    font-size: 15px;
+
+    
+}
+.skills{
+    display: flex;
+    justify-content: center;
+    font-size: 20px;
+    font-size: 20px;
+    padding-top: 70px;
+    border-bottom: 2px solid black;
+    width: 100%;
+}
+.skill{
+    padding-top: 10px;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+
+.container-2{
+    display: flex;
+    border-radius: 10px;
+    margin: 20px;
+    padding: 30px;
+    height: 95%;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+@media only screen and (max-width: 768px) {
+    #homepage{
+        flex-direction: column;
+    }
+   .resume-content{
+        justify-content: center;
+ 
+       
+   }
+   .resumes-content{
+        width: 90%;
+   }
+}
